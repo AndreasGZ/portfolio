@@ -233,11 +233,6 @@ section.projects{
   align-content: stretch;
 }
 
-.card > a{
-  flex-direction: column;
-  justify-content: center;
-}
-
 .card > a > *{
   margin-bottom: 0.5em;
 }
