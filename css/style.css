@@ -1,0 +1,427 @@
+/* Grundeinstellung */
+ *{
+	padding:0px;
+	margin:0px;
+	border:0px;
+	box-sizing:border-box;
+}
+
+/*
+  rgb(102, 102, 102)
+  rgb(245, 245, 245)
+  rgb(20, 20, 20)
+  rgb(64, 64, 64)
+ */
+
+ /* Text noch ergänzen und Profilbild anpassen */
+
+
+/* z-Index: -1 background, 10 first-layer (back), 100 second-layer, 1000 third-layer(front) */
+
+section, aside, article, main, header, footer, nav{
+	display:block;}
+
+html, body{
+  width: 100%;
+  line-height: 1.3;
+  letter-spacing: 1px;
+  font-size: 18px;
+  height: 100%;
+  min-width: 300px;
+}
+
+li{
+   list-style-type:none;
+}
+
+/* General */
+.flex-container{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+}
+
+hr{
+  width: 60%;
+  margin: 3em auto;
+  border: 1px solid rgb(102, 102, 102);
+}
+
+a{
+  display: inline-block;
+  width:100%;
+  height: 100%;
+  color: rgb(20, 20, 20);
+  text-decoration: none;
+}
+
+/* HEAD */
+header{
+  font-size:1em;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  position: relative;
+  z-index: 1000;
+}
+
+header .heroImg{
+  height: 100%;
+  width: 100%;
+  background: url("../img/hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+header .heroLayer{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(20, 20, 20);
+  z-index: 10;
+  opacity: 0.7;
+}
+
+header .hero{
+  position: absolute;
+  top:0;
+  left: 0;
+  font-size: 1.5em;
+  height: 80%;
+  width: 100%;
+  flex-direction: column;
+  color: rgb(245, 245, 245);
+  z-index: 100;
+}
+
+header .arrow{
+  font-size: 4em;
+  cursor: default;
+  padding-bottom: .5em;
+  color: rgb(245, 245, 245);
+}
+
+header nav{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+header nav ul{
+  background-color: rgb(20, 20, 20);
+  width: 100%;
+}
+
+header nav ul li{
+  padding: 1em 0;
+  cursor: pointer;
+}
+
+header nav ul li a{
+  font-size: 1.1em;
+  height: 100%;
+  width: 100%;
+  padding: 0 2em;
+  color: rgb(245, 245, 245);
+}
+
+header nav ul li:hover{
+  font-weight: bold;
+}
+
+/* Main */
+main{
+  font-size:1em;
+  width: 100%;
+  padding: 2em;
+  text-align: center;
+  background-color: rgb(245, 245, 245);
+  color: rgb(20, 20, 20);
+}
+
+main h2{
+  padding: 2em 0 1em 0;
+  color: rgb(64, 64, 64);
+}
+
+section{
+  width: 66%;
+  margin: 0  auto 4em;
+}
+
+section > * {
+  padding: 1em;
+}
+
+/* about */
+section.about .img{
+  width: 33%;
+  min-width: 150px;
+}
+
+section.about img{
+  width: 150px;
+}
+
+section.about article{
+  width: 67%;
+}
+
+section.about a{
+  display: inline;
+}
+
+section.about a:hover{
+  font-weight: bold;
+}
+
+/* CV */
+section.cv{
+  flex-direction: column;
+}
+
+section.cv h3{
+  text-align: left;
+  padding: 2em 2em;
+}
+
+section.cv .row{
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0;
+  align-content: stretch;
+}
+
+section.cv .col1{
+  padding: 1.5em 1.5em 1.5em 0;
+  width: 33%;
+  flex-direction: column;
+}
+
+section.cv .col1 h4{
+  font-size: 1.2em;
+}
+
+section.cv .col1 p{
+  font-size: 0.9em;
+}
+
+section.cv .col2{
+  padding-left: 1.5em;
+  width: 67%;
+  flex-direction: column;
+  border-left: 1px solid rgb(102, 102, 102);
+}
+
+/* Projects */
+section.projects{
+  flex-wrap: wrap;
+}
+
+.card{
+  font-size: 0.9em;
+  width: 25%;
+  padding: 1.5em;
+  flex-direction: column;
+  align-content: stretch;
+}
+
+.card > a{
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card > a > *{
+  margin-bottom: 0.5em;
+}
+
+.card img{
+  width: 100%;
+}
+
+.card > a:hover img{
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Contact */
+section.contact{
+  flex-direction: column;
+}
+
+section.contact img{
+  width: 85px;
+}
+
+section.contact img:hover{
+  padding: 5px;
+}
+
+/* Home-Button */
+.homebutton{
+  width: 50px;
+  height: 50px;
+  background-color: rgb(20, 20, 20);
+  position: fixed;
+  right: 2em;
+  bottom: 2em;
+  z-index: 100;
+  border-radius: 2px;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.homebutton:hover{
+  border: 1px solid rgb(245, 245, 245);
+}
+
+.homebutton a{
+  font-size: 38px;
+  color: rgb(245, 245, 245);
+}
+
+.homebutton a:hover{
+  font-weight: bold;
+}
+
+/* Foot */
+footer{
+  background-color: rgb(20, 20, 20);
+  color: rgb(245, 245, 245);
+  font-size:0.8em;
+  width: 100%;
+  text-align: center;
+  padding: 1.5em;
+}
+
+@media (max-width: 1000px){
+  section{
+    width: 75%;
+  }
+
+  .homebutton{
+    right: 1.5em;
+  }
+
+  .card{
+    width: 33%;
+  }
+}
+
+@media (max-width: 900px) {
+  header .hero{
+    font-size: 1.2em;
+  }
+
+  header nav ul li a{
+    font-size: 1em;
+  }
+
+  section{
+    width: 80%;
+  }
+
+  .homebutton{
+    right: 1em;
+  }
+
+  section.about{
+    flex-direction: column;
+  }
+
+  section.about .img, section.about article{
+    width: 100%;
+  }
+}
+
+@media(max-width: 750px){
+  .homebutton{
+    right: 0.5em;
+    height: 40px;
+    width: 40px;
+  }
+
+  .homebutton a{
+    font-size: 30px;
+  }
+
+  section{
+    width: 90%;
+  }
+}
+
+@media(max-width: 600px){
+  .card{
+    width: 50%;
+  }
+
+  header nav ul li a{
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  section.cv h3{
+    text-align: center;
+    padding: 2em 0;
+  }
+
+  section.cv .row{
+    flex-direction: column;
+  }
+
+  section.cv .row .col1{
+    width: 100%;
+    padding: 0 0 1em;
+  }
+
+  section.cv .row .col2{
+    width: 100%;
+    border-left: 0;
+    padding: 0 0 2em;
+  }
+}
+
+@media(max-width: 480px){
+  header .hero{
+    font-size: 1em;
+  }
+
+  header nav ul li a{
+    padding-left: 0.7em;
+    padding-right: 0.7em;
+  }
+}
+
+@media(max-width: 415px){
+  header .hero{
+    font-size: 0.85em;
+  }
+
+  header nav ul li a{
+    font-size: 0.8em;
+  }
+
+  .card{
+    width: 100%;
+  }
+}
+
+@media(max-width: 360px){
+  header .hero{
+    font-size: 0.75em;
+  }
+
+  header nav ul li a{
+    font-size: 0.7em;
+    padding-left: 0.6em;
+    padding-right: 0.6em;
+  }
+}
