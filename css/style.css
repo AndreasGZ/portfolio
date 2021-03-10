@@ -256,6 +256,16 @@ section.contact{
   flex-direction: column;
 }
 
+section.contact .icon-container{
+  flex-direction: row;
+}
+
+section.contact .icon-container > a{
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+}
+
 section.contact img{
   width: 85px;
 }
